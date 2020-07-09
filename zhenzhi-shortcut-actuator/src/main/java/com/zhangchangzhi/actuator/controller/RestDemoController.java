@@ -10,8 +10,7 @@ import java.util.*;
 @RestController
 @RequestMapping(value="/users")
 public class RestDemoController {
-    //Controller默认为单例模式，其成员变量生命周期为整个应用，并且为各线程公用，使用ThreadLocal和线程安全对象
-    // 创建线程安全的Map
+
     static Map<Long, User> users = Collections.synchronizedMap(new HashMap<>());
 
     @RequestMapping(value="/", method=RequestMethod.GET)
