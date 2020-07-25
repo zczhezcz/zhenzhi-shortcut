@@ -2,29 +2,26 @@ package com.zhangchangzhi.actuator.task;
 
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
+
 /**
- * <p>
- * 订单释放定时任务
- * </p>
- *
- * @author zhangchangzhi
- * @since 2019-12-12
- */
+ * @description:
+ * @author: zhangchangzhi
+ * @create: 2020-07-22 17:00
+ **/
 @Component
 public class OrderReleaseTask {
-    @Scheduled(cron = "0 0 5 * * ?")
+    @Scheduled(cron = "0 0 1 * * ?")
     public void cronJob(){
-        System.out.println("cron");
+        //每1秒，执行一次，cron表达式
     }
 
-    @Scheduled(fixedDelay = 2*60*1000,initialDelay = 30*1000)
+    @Scheduled(fixedDelay = 2  * 1000)
     public void fixedDelayJob(){
-        System.out.println("fixedDelay");
+        //每2秒，执行一次，固定间隔
     }
 
-    @Scheduled(fixedRate = 5 * 1000)
-    public void fixedRatejob(){
-        System.out.println("fixedRatejob");
+    @Scheduled(fixedRate = 3 * 1000)
+    public void fixedRateJob(){
+        //每3秒，执行一次，固定频率
     }
-
 }

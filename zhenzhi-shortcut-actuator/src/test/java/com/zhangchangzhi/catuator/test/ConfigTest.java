@@ -1,7 +1,6 @@
 package com.zhangchangzhi.catuator.test;
 
 import com.zhangchangzhi.actuator.Application;
-import com.zhangchangzhi.actuator.config.H2ServiceConfig;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,11 +17,4 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest(classes = Application.class)
 public class ConfigTest {
 
-    @Autowired
-    H2ServiceConfig h2ServiceConfig;
-    @Test
-    public void test() {
-        System.out.println("-------"
-                + h2ServiceConfig.getIp());
-    }
 }

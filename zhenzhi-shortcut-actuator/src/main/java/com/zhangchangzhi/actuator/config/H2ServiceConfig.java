@@ -3,8 +3,13 @@ package com.zhangchangzhi.actuator.config;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
-@ConfigurationProperties(prefix = "h2service")
+/**
+ * @description:
+ * @author: zhangchangzhi
+ * @create: 2020-07-22 17:44
+ **/
 @Component
+@ConfigurationProperties(prefix = "h2service")
 public class H2ServiceConfig {
     private String ip;
 
@@ -24,13 +29,5 @@ public class H2ServiceConfig {
 
     public void setPort(String port) {
         this.port = port;
-    }
-
-    @Override
-    public String toString() {
-        return "HomeProperties{" +
-                "ip='" + ip + '\'' +
-                ", port='" + port + '\'' +
-                '}';
     }
 }
